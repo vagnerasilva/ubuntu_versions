@@ -1,6 +1,7 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 ENV PYTHON_VERSION 3.12.1
+ENV LINUX_VERSION ubuntu:24.04
 USER root
 
 
