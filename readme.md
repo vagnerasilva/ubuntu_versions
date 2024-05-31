@@ -83,3 +83,20 @@ docker builder prune
 
 Verificando sistema 
 docker system df
+
+
+
+docker build -t ubu20_04_py395_full:1.0 .
+    docker run -it ubu20_04_py395_full:1.0 /bin/bash
+
+
+docker build -t ubu20_04_py310_full:1.0 .
+    docker run -it ubu20_04_py310_full:1.0 /bin/bash
+
+
+docker build -t ubu20_04_py311_full:1.0 .
+    docker run -it ubu20_04_py311_full:1.0 /bin/
+
+
+docker build -t ubu20_04_py312_full:1.0 .
+    docker run -it ubu20_04_py312_full:1.0 /bin/

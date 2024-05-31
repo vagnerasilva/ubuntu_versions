@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ENV PYTHON_VERSION 3.9.5
+ENV PYTHON_VERSION 3.10.1
 ENV LINUX_VERSION ubuntu:20.04
 USER root
 
@@ -25,13 +25,15 @@ RUN mkdir /python && cd /python && \
 
 ### Stage 1 - add/remove packages ###
 
+
+
 ### Stage 1 - add/remove packages ###
 
 
 ### Stage 2 --- collapse layers ###
 RUN python3 --version 
 RUN pip3 install pip --upgrade
-### Stage 2 --- collapse layers ###
+### Stage 2 --- collapse layers ####
 
 #CMD ["/bin/bash", "/run.sh"]
 

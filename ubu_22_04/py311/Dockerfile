@@ -1,6 +1,10 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
+ENV PYTHON_VERSION 3.11.1
+ENV LINUX_VERSION ubuntu:22.04
 USER root
+
+
 
 RUN apt-get update &&\
     apt-get upgrade -y && \
@@ -11,9 +15,9 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /python && cd /python && \
-    wget https://www.python.org/ftp/python/3.11.1/Python-3.11.1.tgz && \
-    tar -zxvf Python-3.11.1.tgz && \
-    cd Python-3.11.1 && \
+    wget https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tgz && \
+    tar -zxvf Python-$PYTHON_VERSION.tgz && \
+    cd Python-$PYTHON_VERSION && \
     ls -lhR && \
     ./configure --enable-optimizations && \
     make install && \
@@ -27,7 +31,8 @@ RUN mkdir /python && cd /python && \
 
 
 ### Stage 2 --- collapse layers ###
-
+RUN python3 --version 
+RUN pip3 install pip --upgrade
 ### Stage 2 --- collapse layers ###
 
 #CMD ["/bin/bash", "/run.sh"]

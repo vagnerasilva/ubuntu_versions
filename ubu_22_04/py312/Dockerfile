@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-ENV PYTHON_VERSION 3.9.5
-ENV LINUX_VERSION ubuntu:20.04
+ENV PYTHON_VERSION 3.12.1
+ENV LINUX_VERSION ubuntu:22.04
 USER root
 
 
@@ -24,6 +24,8 @@ RUN mkdir /python && cd /python && \
     rm -rf /python
 
 ### Stage 1 - add/remove packages ###
+
+
 
 ### Stage 1 - add/remove packages ###
 
