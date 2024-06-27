@@ -117,4 +117,26 @@ docker build -t ubu24_04_py311_full:1.0 .
 
 
 docker build -t ubu24_04_py312_full:1.0 .
-    docker run -it ubu24_04_py312_full:1.0 /bin/
+    docker run -it ubu24_04_py312_full:1.0 /bin/bash
+
+
+     docker run -it 2bc1799b6366 /bin/bash
+
+
+     docker run -it 34480180a130 /bin/sh
+
+pip install poetry
+
+poetry list
+
+poetry config --list
+
+poetry config virtualenvs.in-project true
+
+
+poetry config virtualenvs.create false
+
+
+poetry new new_project
+
+poetry add pandas
